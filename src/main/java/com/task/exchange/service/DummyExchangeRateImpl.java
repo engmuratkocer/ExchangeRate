@@ -27,7 +27,7 @@ public class DummyExchangeRateImpl implements RetrieveExchangeRate {
 
         BigDecimal randomExchangeRate = minRate.add(new BigDecimal(Math.random()).multiply(maxRate.subtract(minRate)));
 
-        LOGGER.info(String.format("DummyService exchange rate value 1 %s = %.5f %s", sourceCurrency, randomExchangeRate, targetCurrency));
+        LOGGER.info(String.format("Dummy exchange rate service returning value for 1 %s = %.5f %s", sourceCurrency, randomExchangeRate, targetCurrency));
 
         return randomExchangeRate.setScale(SCALE, BigDecimal.ROUND_HALF_UP);
     }
